@@ -30,6 +30,7 @@ public class CreateIndex {
         //config the analyzer to index writer
         //default similarity is BM25(k1=1.2,b=0.75)
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
+        config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
         //set similarity to classic which is based on vector space model approaching.
         //creat index writer
         IndexWriter indexWriter = new IndexWriter(directory, config);

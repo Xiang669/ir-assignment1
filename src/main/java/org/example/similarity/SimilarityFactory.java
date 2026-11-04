@@ -9,7 +9,7 @@ public class SimilarityFactory {
             return new BM25Similarity();
         }
         return switch (choice.trim().toLowerCase()) {
-            case "bm25" -> new BM25Similarity(1.2f, 0.75f);
+            case "bm25" -> new BM25Similarity();
             case "classic" -> new ClassicSimilarity();
             case "lmdirichlet" -> new LMDirichletSimilarity(2000f);
             case "dfr" -> new DFRSimilarity(
